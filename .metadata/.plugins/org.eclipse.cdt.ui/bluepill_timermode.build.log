@@ -1,0 +1,19 @@
+14:19:14 **** Incremental Build of configuration Debug for project bluepill_timermode ****
+make -j4 all 
+arm-none-eabi-gcc -o "bluepill_timermode.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/ankith/src/stm32fun/bluepill_timermode/STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluepill_timermode.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: bluepill_timermode.elf
+ 
+arm-none-eabi-size  bluepill_timermode.elf 
+arm-none-eabi-objdump -h -S bluepill_timermode.elf  > "bluepill_timermode.list"
+   text	   data	    bss	    dec	    hex	filename
+   6996	     12	   1644	   8652	   21cc	bluepill_timermode.elf
+arm-none-eabi-objcopy  -O binary bluepill_timermode.elf  "bluepill_timermode.bin"
+Finished building: default.size.stdout
+ 
+Finished building: bluepill_timermode.bin
+ 
+Finished building: bluepill_timermode.list
+ 
+
+14:19:14 Build Finished. 0 errors, 0 warnings. (took 304ms)
+
